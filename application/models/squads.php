@@ -1,5 +1,5 @@
 <?php	
-	class Squads extends MY_Model {
+	class Squads extends TW_Model {
 		public $tableName = 'squads';
 		public $keyName   = 'id';
 

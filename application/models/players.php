@@ -1,6 +1,6 @@
 <?php
 	/* These functions should change the selected fields once the schema is updated. Then functions can be normalized.. o)-<| */
-	class Players extends MY_Model {
+	class Players extends TW_Model {
 		public $tableName = 'players';
 
 		public function __construct() {

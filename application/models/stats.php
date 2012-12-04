@@ -6,7 +6,7 @@
 	// referenced tables are games which is linked with game_id and rounds wich is linked with round_id
     // o)-<|
 
-	class Stats extends MY_Model {
+	class Stats extends TW_Model {
 		public $tableName = 'stats';
 
 		public function __construct() {

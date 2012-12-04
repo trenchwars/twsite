@@ -1,6 +1,6 @@
 <?php
     /* profile class o)-<| */
-    class Profiles extends MY_Model {
+    class Profiles extends TW_Model {
         public function __construct() {
             parent::__construct();
         }
