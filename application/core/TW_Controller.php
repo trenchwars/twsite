@@ -1,7 +1,7 @@
 <?php
-	class TW_Controller extends CI_Controller {
-		public function _output($output) {
-		    /* Code from Allan Moore @ Stack OVerflow */
+    class TW_Controller extends CI_Controller {
+        public function _output($output) {
+            /* Code from Allan Moore @ Stack OVerflow */
             $re = '%# Collapse ws everywhere but in blacklisted elements.
                 (?>             # Match all whitespans other than single space.
                   [^\S ]\s*     # Either one [\t\r\n\f\v] and zero or more ws,
@@ -23,5 +23,5 @@
                 )  # If we made it here, we are not in a blacklist tag.
                 %ix';
             echo preg_replace($re, " ", $output);
-		}
-	}
+        }
+    }
