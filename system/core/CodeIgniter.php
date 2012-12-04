@@ -252,6 +252,16 @@
 	// Set a mark point for benchmarking
 	$BM->mark('loading_time:_base_classes_end');
 
+/* o)-<| I think this is a bug.. we never seem to load the 
+   MY_Model override in application/core .. we'll do it here for sure..
+*/
+  
+    if (file_exists(APPPATH.'core/'.$CFG->config['subclass_prefix'].'Model.php'))
+    {  
+        require APPPATH.'core/'.$CFG->config['subclass_prefix'].'Model.php';
+    }
+
+
 /*
  * ------------------------------------------------------
  *  Security check
