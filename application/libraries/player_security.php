@@ -6,8 +6,7 @@
         }
 
         public function isLoggedIn() {
-            if($this->ci->session->userdata('logged_in') == 'true') return true;
-            else return false;
+            return ($this->ci->session->userdata('logged_in') == 'true');
         }
 
         public function login($playerData) {
