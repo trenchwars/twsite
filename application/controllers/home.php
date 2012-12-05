@@ -12,10 +12,10 @@
 
         public function login() {
             if($this->input->get_post('player_name') != '' && $this->input->get_post('password') != '') {
-                $this->load->model('players');
+                $this->load->model('player_model');
 
                 // Lets check the login. If valid, set the session info
-                if($playerData = $this->players->checkPassword($this->input->get_post('player_name'), $this->input->get_post('password'))) {
+                if($playerData = $this->player_model->checkPassword($this->input->get_post('player_name'), $this->input->get_post('password'))) {
                     $this->player_security->login($playerData);
                     redirect('');
                 } else {

@@ -6,9 +6,9 @@
 
         public function index() {
             if($this->input->post('squad_name') != '') {
-                $this->load->model('squads');
+                $this->load->model('squad_model');
 
-                if($squadId = $this->squads->getIdByName($this->input->post('squad_name'))) {
+                if($squadId = $this->squad_model->getIdByName($this->input->post('squad_name'))) {
                     redirect('squad/view/'.$squadId);
                 } else {
                     $this->session->set_flashdata('error_message', 'Could not locate squad by the name of "'.$this->input->post('squad_name').'"');
@@ -22,9 +22,9 @@
         }
 
         public function view($squadId) {
-            $this->load->model('squads');
+            $this->load->model('squad_model');
 
-            if(!$squadData = $this->squads->findById($squadId)) {
+            if(!$squadData = $this->squad_model->findById($squadId)) {
                 var_dump($squadData);
                 die();
                 $this->session->set_flashdata('error_message', 'Squad does not exist.');
