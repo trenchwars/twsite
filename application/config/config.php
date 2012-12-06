@@ -2,6 +2,7 @@
 
     $config['base_url']                = '';
     $config['index_page']             = '';
+	$config['static_cms_location']     = 'static_cms/';
     $config['uri_protocol']            = 'AUTO';
     $config['url_suffix']             = '';
     $config['language']                = 'english';

@@ -5,4 +5,4 @@
     $autoload['helper']   = array('url');
     $autoload['config']   = array();
     $autoload['language'] = array();
-    $autoload['model']    = array();
+    $autoload['model']    = array('cms_model');
