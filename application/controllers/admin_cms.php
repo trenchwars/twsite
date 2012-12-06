@@ -11,7 +11,7 @@
 			$items = $this->cms_model->getList();
 
 			$this->load->view('include/header');
-			$this->load->view('admin_css_index', array('items' => $items));
+			$this->load->view('admin_cms_index', array('items' => $items));
 			$this->load->view('include/footer');
 		}
 
@@ -23,13 +23,13 @@
 			$contents = $this->cms_model->get($item);
 
 			$this->load->view('include/header');
-			$this->load->view('admin_css_edit', array('contents' => $contents));
+			$this->load->view('admin_cms_edit', array('contents' => $contents));
 			$this->load->view('include/footer');
 		}
 
 		public function view() {
 			$this->load->view('include/header');
-			$this->load->view('admin_css_view');
+			$this->load->view('admin_cms_view');
 			$this->load->view('include/footer');
 		}
 	}
