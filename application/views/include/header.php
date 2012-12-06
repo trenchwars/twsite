@@ -36,6 +36,9 @@
                         <li><a href="<?=base_url();?>"      > Home    </a></li>
                         <li><a href="<?=base_url();?>player"> Players </a></li>
                         <li><a href="<?=base_url();?>squad" > Squads  </a></li>
+						<?if($this->player_security->hasAccess('WebAdmin')) {?>
+						<li><a href="<?=base_url();?>admin" >Admin    </a></li>
+						<?}?>
                     </ul>
                 </div>
 

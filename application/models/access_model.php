@@ -11,8 +11,10 @@
 
         public function hasAccess($playerId, $accessName) {
             if(!$res = $this->db->query('SELECT * FROM tblRank WHERE fcRankCode=?', array($accessName))) return false;
-            $res = $res->row_array();
-            return $this->hasAccessById($playerId, $res['fnRankID']);
+            
+			if(!$row = $res->row_array()) return false;
+            
+			return $this->hasAccessById($playerId, $row['fnRankID']);
         }   
         
         public function hasAccessById($playerId, $accessId) {

@@ -17,6 +17,14 @@
             ));
         }
 
+		public function hasAccess($to) {
+			$this->ci->load->model('access_model');
+			
+			if(!$this->isLoggedIn()) return false;
+
+			return $this->ci->access_model->hasAccess($this->ci->session->userdata('player_id'), $to);
+		}
+
         public function logout() {
             $this->ci->session->set_userdata(array('logged_in' => ''));
             $this->ci->session->sess_destroy();

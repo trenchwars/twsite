@@ -2,6 +2,7 @@
 	class Admin_cms extends TW_Controller {
 		public function __construct() {
 			parent::__construct();
+            if(!$this->player_security->hasAccess('WebAdmin')) show_404();
 		}
 
 		public function index() {
