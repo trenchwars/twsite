@@ -12,4 +12,22 @@
 			$this->load->view('admin_staff_index');
 			$this->load->view('include/footer');
 		}
+
+		public function management() {
+			$this->load->view('include/header');
+			$this->load->view('admin_staff_management');
+			$this->load->view('include/footer');
+		}
+
+		public function training() {
+			$this->load->view('include/header');
+			$this->load->view('admin_staff_training');
+			$this->load->view('include/footer');
+		}
+
+		public function resources() {
+			$this->load->view('include/header');
+			$this->load->view('admin_staff_resources');
+			$this->load->view('include/footer');
+		}
 	}

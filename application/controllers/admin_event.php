@@ -12,4 +12,10 @@
 			$this->load->view('admin_event_index');
 			$this->load->view('include/footer');
 		}
+
+		public function management() {
+			$this->load->view('include/header');
+			$this->load->view('admin_event_management');
+			$this->load->view('include/footer');
+		}
 	}

@@ -12,4 +12,16 @@
 			$this->load->view('admin_medals_index');
 			$this->load->view('include/footer');
 		}
+
+		public function manage() {
+			$this->load->view('include/header');
+			$this->load->view('admin_medals_manage');
+			$this->load->view('include/footer');
+		}
+
+		public function player() {
+			$this->load->view('include/header');
+			$this->load->view('admin_medals_player');
+			$this->load->view('include/footer');
+		}
 	}
