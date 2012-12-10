@@ -1,5 +1,3 @@
-<h1><a href="<?=base_url();?>admin/">Admin</a> -> CMS Management</h1>
-
 <table>
 	<thead>
 		<th>CMS Item Name</th>
