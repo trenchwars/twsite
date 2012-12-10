@@ -75,6 +75,7 @@ width: 100%;
 background: url(/img/chromebg.gif) center center repeat-x;
 padding: 5px 0;
 margin: 0;
+padding-right: 8px;
 text-align: left; /*set value to "right" for example to align menu to the left of page*/
 }
 
@@ -102,4 +103,47 @@ height:1.5em; /*height of 2nd level sub menus. Set to largest's sub menu's heigh
 
 .tabcontent{
 display:none;
+}
+
+
+
+#breadcrumb {
+    font: 11px Arial, Helvetica, sans-serif;
+    background-image:url('/img/bc_bg.gif'); 
+    background-repeat:repeat-x;
+	height:30px;
+    line-height:30px;
+    color:#888;
+    border:solid 1px #cacaca;
+    width:100%;
+    overflow:hidden;
+    margin:0px;
+    padding:0px;
+}
+
+#breadcrumb li {
+    list-style-type:none;
+    padding-left:10px;
+	display:inline-block;
+	float:left;
+}
+
+#breadcrumb a {
+	display:inline-block;
+    background-image:url('/img/bc_separator.gif'); 
+    background-repeat:no-repeat; 
+    background-position:right;
+    padding-right: 15px;
+    text-decoration: none;
+    color:#333333;
+	outline:none;
+}
+
+.home {
+    border:none;
+    margin: 7px 0px;
+}
+
+#breadcrumb a:hover {
+	color:#35acc5;
 }
